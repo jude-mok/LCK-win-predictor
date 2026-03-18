@@ -24,10 +24,6 @@ env/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# ML model & data files (large binary files)
-backend/models/*.pkl
-backend/data/*.pkl
-
 # Distribution / packaging
 dist/
 build/
