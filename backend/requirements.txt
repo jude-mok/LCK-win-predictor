@@ -6,3 +6,4 @@ pandas
 numpy
 python-dotenv
 pydantic
+supabase
