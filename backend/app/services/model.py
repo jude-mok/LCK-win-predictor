@@ -54,7 +54,9 @@ def predict_match(blue_team: str, red_team: str) -> dict:
         "red_team": red_team,
         "red_win_rate": round(float(proba[0]), 4),
         "predicted_winner": blue_team if proba[1] > 0.5 else red_team,
-        "features": diff
+        "features": diff,
+        "blue_stats": {k: round(float(v), 4) for k, v in blue.items()},
+        "red_stats": {k: round(float(v), 4) for k, v in red.items()},
     }
 
 

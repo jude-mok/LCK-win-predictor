@@ -53,3 +53,12 @@ def get_schedule_by_week(week_number: int):
         .order("date")\
         .execute()
     return response.data
+
+@router.get("/{match_id}")
+def get_match_by_id(match_id: int):
+    response = supabase.table("schedule")\
+        .select("*")\
+        .eq("id", match_id)\
+        .single()\
+        .execute()
+    return response.data
