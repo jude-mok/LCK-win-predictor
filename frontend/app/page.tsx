@@ -51,7 +51,7 @@ export default function Home() {
 
   // 현재 week 번호 가져오기
   useEffect(() => {
-    fetch("http://localhost:8000/schedule/")
+    fetch("https://lck-win-predictor-production.up.railway.app/schedule/")
       .then((res) => res.json())
       .then((data: Match[]) => {
         if (data.length > 0) {
@@ -66,7 +66,7 @@ export default function Home() {
     if (currentWeek === 0) return;
     setWeekLoading(true);
 
-    fetch(`http://localhost:8000/schedule/entire/week/${currentWeek}`)
+    fetch(`https://lck-win-predictor-production.up.railway.app/schedule/entire/week/${currentWeek}`)
       .then((res) => res.json())
       .then(async (data: Match[]) => {
         setWeekMatches(data);
@@ -78,7 +78,7 @@ export default function Home() {
         await Promise.all(
           upcoming.map(async (match) => {
             try {
-              const res = await fetch("http://localhost:8000/predict/predict", {
+              const res = await fetch("https://lck-win-predictor-production.up.railway.app/predict/predict", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -114,7 +114,7 @@ export default function Home() {
     Promise.all(
       toFetch.map(async (match) => {
         try {
-          const res = await fetch("http://localhost:8000/predict/predict", {
+          const res = await fetch("https://lck-win-predictor-production.up.railway.app/predict/predict", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

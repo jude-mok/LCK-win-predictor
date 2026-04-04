@@ -70,12 +70,12 @@ export default function MatchDetail() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:8000/schedule/${id}`)
+    fetch(`https://lck-win-predictor-production.up.railway.app/schedule/${id}`)
       .then((res) => res.json())
       .then(async (matchData: Match) => {
         setMatch(matchData);
 
-        const predRes = await fetch("http://localhost:8000/predict/predict", {
+        const predRes = await fetch("https://lck-win-predictor-production.up.railway.app/predict/predict", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
