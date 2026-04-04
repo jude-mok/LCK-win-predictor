@@ -46,6 +46,7 @@ export default function Home() {
   const [filter, setFilter] = useState<"upcoming" | "finished">("upcoming");
   const [predictions, setPredictions] = useState<Record<number, { blue: number; red: number }>>({});
   const [currentWeek, setCurrentWeek] = useState<number>(1);
+  const [activeWeek, setActiveWeek] = useState<number>(1);
   const [weekMatches, setWeekMatches] = useState<Match[]>([]);
   const [weekLoading, setWeekLoading] = useState(false);
 
@@ -56,6 +57,7 @@ export default function Home() {
       .then((data: Match[]) => {
         if (data.length > 0) {
           setCurrentWeek(data[0].week);
+          setActiveWeek(data[0].week);
         }
         setLoading(false);
       });
@@ -205,8 +207,13 @@ export default function Home() {
                   <button
                     key={week}
                     onClick={() => setCurrentWeek(week)}
+                    disabled={
+                      filter === "upcoming" ? week < activeWeek : week > activeWeek
+                    }
                     className={`px-5 py-2 rounded-full font-bold text-sm whitespace-nowrap transition-all ${
-                      currentWeek === week
+                      (filter === "upcoming" ? week < activeWeek : week > activeWeek)
+                        ? "bg-white text-[#c0c2d6] border border-[#e6e7f4] cursor-not-allowed opacity-50"
+                        : currentWeek === week
                         ? "bg-[#004ecb] text-white shadow-md"
                         : "bg-white text-[#424656] border border-[#e6e7f4] hover:border-[#004ecb]"
                     }`}
