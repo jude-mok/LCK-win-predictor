@@ -1,9 +1,10 @@
 # LCK Win Rate Predictor
 
-A FastAPI backend that predicts LCK (League of Legends Champions Korea) match win rates using machine learning.
+A web service that predicts LCK (League of Legends Champions Korea) match win rates using machine learning, and lets users earn LP points by predicting match outcomes.
 
 ## Tech Stack
 
+- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS 4
 - **Backend**: FastAPI, Uvicorn
 - **ML**: scikit-learn, pandas, numpy, joblib
 
@@ -11,11 +12,18 @@ A FastAPI backend that predicts LCK (League of Legends Champions Korea) match wi
 
 ```
 LOL_ML/
+├── frontend/                    # Next.js 16 web app
+│   └── app/
+│       ├── page.tsx             # Main page (match list + AI predictions)
+│       └── match/
+│           └── [id]/
+│               └── page.tsx     # Match detail page
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI app entry point
 │   │   ├── routers/
-│   │   │   └── predict.py       # Prediction API router
+│   │   │   ├── predict.py       # Win rate prediction API
+│   │   │   └── schedule.py      # Match schedule API
 │   │   ├── schemas/
 │   │   │   └── predict.py       # Request/response schemas
 │   │   └── services/
@@ -32,6 +40,8 @@ LOL_ML/
 
 ## Getting Started
 
+### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -40,11 +50,23 @@ uvicorn app.main:app --reload
 
 Swagger UI available at http://localhost:8000/docs
 
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+App available at http://localhost:3000
+
 ## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/health` | Health check |
+| `GET` | `/schedule/` | Current week's match schedule |
+| `GET` | `/schedule/entire/week/{week}` | All matches for a given week |
 | `GET` | `/predict/teams` | Get list of available teams |
 | `POST` | `/predict/predict` | Predict win rate between two teams |
 | `GET` | `/predict/features` | Get model feature importances |
@@ -76,7 +98,7 @@ POST /predict/predict
 }
 ```
 
-## Features
+## ML Features
 
 The model uses the difference (blue − red) of the following rolling team statistics as input features.
 
@@ -88,3 +110,18 @@ The model uses the difference (blue − red) of the following rolling team stati
 | `roll_firstherald` | First herald rate |
 | `roll_firsttower` | First tower rate |
 | `patch_winrate` | Win rate on the current patch |
+
+## Supported Teams (2026 Season)
+
+| Code | Team |
+|------|------|
+| T1 | T1 |
+| GEN | Gen.G |
+| HLE | Hanwha Life Esports |
+| DK | Dplus KIA |
+| KT | KT Rolster |
+| BFX | BNK FEARX |
+| NS | Nongshim RedForce |
+| KRX | DRX |
+| DNS | DN SOOPers |
+| BRO | HANJIN BRION |
