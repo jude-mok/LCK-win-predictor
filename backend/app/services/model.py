@@ -37,26 +37,34 @@ def get_team_features(team_name: str) -> dict:
     }
 
 
-def predict_match(blue_team: str, red_team: str) -> dict:
-    blue = get_team_features(blue_team)
-    red = get_team_features(red_team)
+def predict_match(team1: str, team2: str) -> dict:
+    t1 = get_team_features(team1)
+    t2 = get_team_features(team2)
 
-    diff = {f'diff_{k}': blue[k] - red[k] for k in blue.keys()}
+    diff_1 = {f'diff_{k}': t1[k] - t2[k] for k in t1.keys()}
+    diff_2 = {f'diff_{k}': t2[k] - t1[k] for k in t1.keys()}
 
-    X_pred = pd.DataFrame([diff])[DIFF_COLS]
-    X_pred_sc = scaler.transform(X_pred)
+    X1 = pd.DataFrame([diff_1])[DIFF_COLS]
+    X2 = pd.DataFrame([diff_2])[DIFF_COLS]
 
-    proba = model.predict_proba(X_pred_sc)[0]
+    X1_sc = scaler.transform(X1)
+    X2_sc = scaler.transform(X2)
+
+    proba_1 = model.predict_proba(X1_sc)[0]  
+    proba_2 = model.predict_proba(X2_sc)[0]
+
+    team1_win = round(float((proba_1[1] + proba_2[0]) / 2), 4)
+    team2_win = round(float(1 - team1_win), 4)
 
     return {
-        "blue_team": blue_team,
-        "blue_win_rate": round(float(proba[1]), 4),
-        "red_team": red_team,
-        "red_win_rate": round(float(proba[0]), 4),
-        "predicted_winner": blue_team if proba[1] > 0.5 else red_team,
-        "features": diff,
-        "blue_stats": {k: round(float(v), 4) for k, v in blue.items()},
-        "red_stats": {k: round(float(v), 4) for k, v in red.items()},
+        "team1": team1,
+        "team1_win_rate": team1_win,
+        "team2": team2,
+        "team2_win_rate": team2_win,
+        "predicted_winner": team1 if team1_win > 0.5 else team2,
+        "features": diff_1,
+        "team1_stats": {k: round(float(v), 4) for k, v in t1.items()},
+        "team2_stats": {k: round(float(v), 4) for k, v in t2.items()},
     }
 
 
