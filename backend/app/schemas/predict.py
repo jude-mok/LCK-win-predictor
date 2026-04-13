@@ -3,13 +3,13 @@ from typing import Optional
 
 
 class Predict_Request(BaseModel):
-    blue_team: str
-    red_team: str
-    
+    team1: str
+    team2: str
+
 class Predict_Response(BaseModel):
-    blue_team: str
-    blue_team_winrate: str
-    red_team: str
-    red_team_winrate: str
+    team1: str
+    team1_win_rate: float
+    team2: str
+    team2_win_rate: float
     predicted_winner: str
     features: dict
