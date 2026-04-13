@@ -84,14 +84,14 @@ export default function Home() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                  blue_team: PREDICT_NAME_MAP[match.team_1],
-                  red_team: PREDICT_NAME_MAP[match.team_2],
+                  team1: PREDICT_NAME_MAP[match.team_1],
+                  team2: PREDICT_NAME_MAP[match.team_2],
                 }),
               });
               const pred = await res.json();
               results[match.id] = {
-                blue: Math.round(pred.blue_win_rate * 100),
-                red: Math.round(pred.red_win_rate * 100),
+                blue: Math.round(pred.team1_win_rate * 100),
+                red: Math.round(pred.team2_win_rate * 100),
               };
             } catch (e) {
               console.error(e);
@@ -120,14 +120,14 @@ export default function Home() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              blue_team: PREDICT_NAME_MAP[match.team_1],
-              red_team: PREDICT_NAME_MAP[match.team_2],
+              team1: PREDICT_NAME_MAP[match.team_1],
+              team2: PREDICT_NAME_MAP[match.team_2],
             }),
           });
           const pred = await res.json();
           results[match.id] = {
-            blue: Math.round(pred.blue_win_rate * 100),
-            red: Math.round(pred.red_win_rate * 100),
+            blue: Math.round(pred.team1_win_rate * 100),
+            red: Math.round(pred.team2_win_rate * 100),
           };
         } catch (e) {
           console.error(e);

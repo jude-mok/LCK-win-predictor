@@ -52,13 +52,13 @@ interface Match {
 }
 
 interface Prediction {
-  blue_team: string;
-  blue_win_rate: number;
-  red_team: string;
-  red_win_rate: number;
+  team1: string;
+  team1_win_rate: number;
+  team2: string;
+  team2_win_rate: number;
   predicted_winner: string;
-  blue_stats: Record<string, number>;
-  red_stats: Record<string, number>;
+  team1_stats: Record<string, number>;
+  team2_stats: Record<string, number>;
 }
 
 export default function MatchDetail() {
@@ -79,8 +79,8 @@ export default function MatchDetail() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            blue_team: PREDICT_NAME_MAP[matchData.team_1],
-            red_team: PREDICT_NAME_MAP[matchData.team_2],
+            team1: PREDICT_NAME_MAP[matchData.team_1],
+            team2: PREDICT_NAME_MAP[matchData.team_2],
           }),
         });
         const predData = await predRes.json();
@@ -111,8 +111,8 @@ export default function MatchDetail() {
 
   if (!match || !prediction) return null;
 
-  const blueWin = Math.round(prediction.blue_win_rate * 100);
-  const redWin = Math.round(prediction.red_win_rate * 100);
+  const blueWin = Math.round(prediction.team1_win_rate * 100);
+  const redWin = Math.round(prediction.team2_win_rate * 100);
 
   return (
     <div className="bg-[#faf8ff] min-h-screen text-[#191b24]">
@@ -241,8 +241,8 @@ export default function MatchDetail() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(METRIC_LABELS).map(([key, meta]) => {
-              const blueVal = prediction.blue_stats[key] ?? 0;
-              const redVal = prediction.red_stats[key] ?? 0;
+              const blueVal = prediction.team1_stats[key] ?? 0;
+              const redVal = prediction.team2_stats[key] ?? 0;
               const total = Math.abs(blueVal) + Math.abs(redVal);
               const blueWidth = total === 0 ? 50 : Math.round((Math.abs(blueVal) / total) * 100);
               const redWidth = 100 - blueWidth;
