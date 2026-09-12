@@ -20,7 +20,7 @@ uv run python backend/training/process_lck_data.py \
   --input backend/data/raw/2025_LoL_esports_match_data_from_OraclesElixir.csv \
   --input backend/data/raw/2026_LoL_esports_match_data_from_OraclesElixir.csv \
   --output backend/data/processed/lck_team_games.csv.gz
-uv run python backend/training/train_model.py \
+uv run python -m backend.training.train_model \
   --input backend/data/processed/lck_team_games.csv.gz
 ```
 

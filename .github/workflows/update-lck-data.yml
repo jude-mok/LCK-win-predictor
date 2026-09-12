@@ -70,7 +70,7 @@ jobs:
 
       - name: Train and evaluate candidate model
         run: |
-          uv run python backend/training/train_model.py \
+          uv run python -m backend.training.train_model \
             --input backend/data/processed/lck_team_games.csv.gz
 
       - name: Smoke test published or existing model
