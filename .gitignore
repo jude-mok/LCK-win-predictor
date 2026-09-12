@@ -34,6 +34,11 @@ build/
 .pytest_cache/
 .coverage
 
+# Downloaded Oracle's Elixir raw datasets
+backend/data/raw/
+backend/data/processed/
+backend/training/reports/
+
 # IDE
 .idea/
 .vscode/
