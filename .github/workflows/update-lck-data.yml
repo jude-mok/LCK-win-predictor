@@ -1,0 +1,116 @@
+name: Weekly LCK data update
+
+on:
+  schedule:
+    # GitHub Actions uses UTC. 03:00 UTC is Monday 12:00 KST.
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-lck-data-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up uv and Python
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Run pipeline tests
+        run: uv run python -m unittest backend.tests.test_training_pipeline
+
+      - name: Restore fixed 2025 dataset
+        id: restore-2025
+        uses: actions/cache/restore@v6
+        with:
+          path: backend/data/raw/2025_LoL_esports_match_data_from_OraclesElixir.csv
+          key: oracles-elixir-2025-v1
+
+      - name: Download fixed 2025 dataset
+        if: steps.restore-2025.outputs.cache-hit != 'true'
+        run: |
+          uv run python backend/training/download_oracles_elixir.py \
+            --year 2025 \
+            --file-id 1v6LRphp2kYciU4SXp0PCjEMuev1bDejc
+
+      - name: Cache fixed 2025 dataset
+        if: steps.restore-2025.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: backend/data/raw/2025_LoL_esports_match_data_from_OraclesElixir.csv
+          key: oracles-elixir-2025-v1
+
+      - name: Download current 2026 dataset
+        run: |
+          uv run python backend/training/download_oracles_elixir.py \
+            --year 2026 \
+            --file-id 1hnpbrUpBMS1TZI7IovfpKeZfWJH1Aptm
+
+      - name: Create validated LCK dataset
+        run: |
+          uv run python backend/training/process_lck_data.py \
+            --input backend/data/raw/2025_LoL_esports_match_data_from_OraclesElixir.csv \
+            --input backend/data/raw/2026_LoL_esports_match_data_from_OraclesElixir.csv \
+            --output backend/data/processed/lck_team_games.csv.gz
+
+      - name: Train and evaluate candidate model
+        run: |
+          uv run python backend/training/train_model.py \
+            --input backend/data/processed/lck_team_games.csv.gz
+
+      - name: Smoke test published or existing model
+        run: |
+          uv run python -c \
+            "from backend.app.services.model import get_teams, predict_match; teams = get_teams(); assert len(teams) >= 2; print(predict_match(teams[0], teams[1]))"
+
+      - name: Commit accepted model artifacts
+        shell: bash
+        run: |
+          changes="$(git status --porcelain -- \
+            backend/models/lck_model.pkl \
+            backend/models/lck_scaler.pkl \
+            backend/models/lck_model_metadata.json \
+            backend/data/lck_featured.pkl \
+            backend/data/lck_team_state.pkl)"
+
+          if [ -z "$changes" ]; then
+            echo "Candidate was rejected or no new data was found; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            backend/models/lck_model.pkl \
+            backend/models/lck_scaler.pkl \
+            backend/models/lck_model_metadata.json \
+            backend/data/lck_featured.pkl \
+            backend/data/lck_team_state.pkl
+          git commit -m "chore(model): weekly LCK model update"
+          git push
+
+      - name: Upload processed LCK dataset
+        uses: actions/upload-artifact@v7
+        with:
+          name: lck-team-games-${{ github.run_id }}
+          path: |
+            backend/data/processed/*.csv.gz
+            backend/data/processed/*.manifest.json
+            backend/training/reports/*.json
+          if-no-files-found: error
+          retention-days: 30
