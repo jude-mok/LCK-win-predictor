@@ -45,9 +45,9 @@ LOL_ML/
 ### Backend
 
 ```bash
+uv sync
 cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+uv run uvicorn app.main:app --reload
 ```
 
 Swagger UI available at `http://localhost:8000/docs`
