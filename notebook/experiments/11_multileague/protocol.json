@@ -1,0 +1,25 @@
+{
+  "hypothesis": "More 2025 league examples improve the learned player/team representations on LCK.",
+  "train_year": 2025,
+  "test": "same 2026 LCK 186 series / 497 sets",
+  "tracks": [
+    "position_additive",
+    "cross_position",
+    "upper_lower"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "training_weighting": "one equal-weight sample per set; no league balancing",
+  "controls": "same architectures, 13 inputs, max500/patience30/Adam.001; same LCK 2025 validation33; exact original LCK input arrays",
+  "history_policy": "LCK rows retain original LCK-only histories; extra non-LCK rows use preceding eligible games across leagues. LCK history expansion is NOT part of this experiment.",
+  "quality_policy": "complete game, 10 identified players, two valid teams, one of each role, finite required stats; no league-name exclusions",
+  "series_policy": "Non-LCK Bo1/Bo2 games can train a set classifier; no inference of their series format required.",
+  "warnings": [
+    "2026 has been repeatedly inspected: retrospective comparison, not untouched test.",
+    "League strength is not explicitly modeled.",
+    "Same first-set announced roster and iid set-to-series assumptions as experiment10."
+  ]
+}

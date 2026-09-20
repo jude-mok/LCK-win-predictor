@@ -1,0 +1,53 @@
+{
+  "train_sets": 1212,
+  "fit_sets": 1002,
+  "validation_series": 33,
+  "leagues": {
+    "LCK": 555,
+    "LEC": 306,
+    "LTA N": 214,
+    "VCS": 137
+  },
+  "variants": {
+    "selected_baseline": {
+      "epochs": {
+        "42": 1,
+        "43": 7,
+        "44": 74
+      },
+      "player_dim": 13,
+      "team_dim": 0,
+      "parameters": 213
+    },
+    "player_leads": {
+      "epochs": {
+        "42": 1,
+        "43": 1,
+        "44": 33
+      },
+      "player_dim": 16,
+      "team_dim": 0,
+      "parameters": 237
+    },
+    "team_lead_frequency": {
+      "epochs": {
+        "42": 100,
+        "43": 1,
+        "44": 35
+      },
+      "player_dim": 16,
+      "team_dim": 4,
+      "parameters": 241
+    },
+    "team_lead_conversion": {
+      "epochs": {
+        "42": 95,
+        "43": 1,
+        "44": 40
+      },
+      "player_dim": 16,
+      "team_dim": 5,
+      "parameters": 242
+    }
+  }
+}

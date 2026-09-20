@@ -43,3 +43,6 @@ backend/training/reports/
 .idea/
 .vscode/
 *.swp
+
+# Local immutable prediction database
+backend/data/runtime/

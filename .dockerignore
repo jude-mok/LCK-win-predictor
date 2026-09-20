@@ -1,0 +1,12 @@
+**
+!backend/
+!backend/app/
+!backend/app/**
+!backend/models/
+!backend/models/player_a/
+!backend/models/player_a/*.json
+!backend/serving-requirements.txt
+!Dockerfile
+**/__pycache__
+**/*.pyc
+**/.env*

@@ -1,216 +1,52 @@
-# LCK Win Rate Predictor
+# LCK Win Predictor
 
-A web service that predicts LCK (League of Legends Champions Korea) match win rates using machine learning. The model is trained on 650+ matches from the 2025–2026 LCK seasons and predicts win probability based on each team's recent performance statistics.
+Next.js + FastAPI service backed by Supabase. Select two teams to load their current Main lineups, then swap players by position to recalculate the match probability.
 
-## Tech Stack
+## Current model
 
-- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS 4
-- **Backend**: FastAPI, Uvicorn
-- **Database**: Supabase (PostgreSQL)
-- **ML**: scikit-learn, pandas, numpy, joblib
-- **Deployment**: Railway
+Player A: 13 features per player, shared 13→8→4 encoder and five position-specific 4→2→1 heads. Team scores are compared using a sigmoid. Three seeds are averaged, then converted to BO3/BO5 probabilities. Trained on 555 LCK sets from 2025; retrospective 2026 evaluation: 118/186 series (63.44%). The 2026 period has been repeatedly inspected, so it is not an untouched test set.
 
-## Project Structure
+Portable JSON weights, scaling and imputation values are served using NumPy; PyTorch is required for research only. The exported runtime reproduces the research predictions within 2.4e-7.
 
-```
-LOL_ML/
-├── frontend/                    # Next.js 16 web app
-│   └── app/
-│       ├── page.tsx             # Main page (match schedule + AI predictions)
-│       └── match/
-│           └── [id]/
-│               └── page.tsx     # Match detail page (stat breakdown)
-├── backend/
-│   ├── app/
-│   │   ├── main.py              # FastAPI app entry point
-│   │   ├── routers/
-│   │   │   ├── predict.py       # Win rate prediction API
-│   │   │   └── schedule.py      # Match schedule API
-│   │   ├── schemas/
-│   │   │   └── predict.py       # Request/response schemas
-│   │   └── services/
-│   │       └── model.py         # Model loading and prediction logic
-│   ├── models/
-│   │   ├── lck_model.pkl        # Trained Logistic Regression model
-│   │   └── lck_scaler.pkl       # StandardScaler for feature normalization
-│   ├── data/
-│   │   └── lck_featured.pkl     # Feature-engineered team data
-│   └── requirements.txt
-└── notebook/
-    └── lol_predict.ipynb        # Data analysis and model training notebook
+## Roster flow
+
+`public.players` contains `team_code`, `team_name`, `position`, `player_name`, `player_id`, `league`, `roster_status`, and `roster_as_of` (timestamptz). Exactly one `Main` player is required per team and position (`top`, `jng`, `mid`, `bot`, `sup`). Others are `sub`.
+
+- `GET /predict/rosters`: DB roster catalog and history availability.
+- `POST /predict/predict`: `{ "team1": "T1", "team2": "GEN", "best_of": 3 }` automatically resolves Main players.
+- Optional `team1_roster` / `team2_roster` maps replace individual positions by player ID. The server checks team and position; these requests do not change DB defaults.
+- The match list assumes BO3; the detail view supports BO3/BO5. Finished matches also show current-roster calculations, not purported historical forecasts.
+
+LCK histories retain the champion's original feature policy. Players without LCK history use their last five complete CL games; CL use is disclosed and its accuracy is not separately validated. Roster changes in DB are live; performance statistics require refreshing the exported player-state artifact. Current source cutoff: 2026-09-12.
+
+## Run
+
+```sh
+uv sync --frozen
+uv run uvicorn backend.app.main:app --reload --port 8000
 ```
 
-## Getting Started
+Configure `SUPABASE_URL` and `SUPABASE_KEY` on the backend only. For the frontend:
 
-### Backend
-
-```bash
-uv sync
-cd backend
-uv run uvicorn app.main:app --reload
-```
-
-Swagger UI available at `http://localhost:8000/docs`
-
-### Frontend
-
-```bash
+```sh
 cd frontend
-npm install
+npm ci
 npm run dev
 ```
 
-App available at `http://localhost:3000`
+Frontend requests use a same-origin `/api` proxy. Development defaults to port 8000. Production defaults to the existing Railway API; override `API_BACKEND_URL` before building to change the destination. `NEXT_PUBLIC_API_URL` can explicitly bypass the proxy when needed.
 
-### Environment Variables
+The root Dockerfile serves the backend. A backend service rooted at `backend/` may instead install `requirements.txt` and run `uvicorn app.main:app --host 0.0.0.0 --port $PORT`. A frontend service uses root `frontend/`, `npm run build`, then `npm run start -- --hostname 0.0.0.0 --port $PORT`.
 
-```bash
-# Backend
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_service_role_key
+`/health` is liveness and `/ready` checks local model loading. Verify `/predict/rosters` and a prediction as well when deploying because DB access is separate. Optional historical snapshot endpoints are not part of the current UI flow; production snapshot storage requires an explicit persistent `PREDICTION_DB_PATH`.
+
+## Verify and research
+
+```sh
+uv run python -m unittest discover -s backend/tests
+cd frontend
+npm run build
+npm run lint
 ```
 
-Set via Railway Shared Variables in production. Use `os.environ.get()` (not `load_dotenv()`) for Railway compatibility.
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/health` | Health check |
-| `GET` | `/schedule/` | Current week's match schedule |
-| `GET` | `/schedule/entire/week/{week}` | All matches for a given week |
-| `GET` | `/predict/teams` | Get list of available teams |
-| `POST` | `/predict/predict` | Predict win rate between two teams |
-| `GET` | `/predict/features` | Get model feature importances |
-
-### Prediction Request
-
-```json
-POST /predict/predict
-{
-  "team1": "T1",
-  "team2": "Gen.G"
-}
-```
-
-### Prediction Response
-
-```json
-{
-  "team1": "T1",
-  "team1_win_rate": 0.6312,
-  "team2": "Gen.G",
-  "team2_win_rate": 0.3688,
-  "predicted_winner": "T1",
-  "features": {
-    "diff_roll_winrate": 0.12,
-    "diff_roll_golddiff15": 350.5
-  },
-  "team1_stats": {
-    "roll_winrate": 0.8,
-    "roll_golddiff15": 420.3
-  },
-  "team2_stats": {
-    "roll_winrate": 0.6,
-    "roll_golddiff15": 120.1
-  }
-}
-```
-
-## ML Model
-
-### Architecture
-
-- **Model**: Logistic Regression
-- **Scaler**: StandardScaler
-- **Cross-validation**: TimeSeriesSplit (n_splits=5)
-- **Performance**: Accuracy 57.0% / ROC-AUC 0.632
-
-### Why Logistic Regression
-
-The dataset contains ~692 training samples. Complex models (e.g. Gradient Boosting) underperform with this data volume due to overfitting. Logistic Regression is better suited for small datasets and produces interpretable coefficients — directly explainable as feature weights.
-
-### Side-Agnostic Prediction
-
-Predictions are independent of Blue/Red side assignment. Win probability is computed by averaging two directional predictions (team1−team2 and team2−team1), ensuring identical results regardless of input order.
-
-```python
-# Both calls return the same team1 win probability
-predict_match("T1", "GEN.G")
-predict_match("GEN.G", "T1")  # team2_win_rate == above team1_win_rate
-```
-
-### Features
-
-The model uses the difference (team1 − team2) of the following rolling team statistics:
-
-| Feature | Description |
-|---------|-------------|
-| `roll_winrate` | Rolling win rate over last 5 games |
-| `roll_golddiff15` | Average gold difference at 15 minutes |
-| `roll_firstdragon` | First dragon rate |
-| `roll_firstherald` | First herald rate |
-| `roll_firsttower` | First tower rate |
-| `patch_winrate` | Win rate on the current patch |
-
-### Feature Importance (Logistic Regression Coefficients)
-
-| Feature | Coefficient | Interpretation |
-|---------|-------------|----------------|
-| Recent Win Rate | +0.358 | Strongest positive signal |
-| Gold Diff @15 | +0.135 | Second strongest |
-| First Tower | +0.099 | Moderate positive |
-| First Dragon | +0.012 | Weak positive |
-| Patch Win Rate | +0.012 | Weak positive |
-| First Herald | -0.067 | Negative (likely meta-dependent) |
-
-### Data Pipeline
-
-1. Load Oracle's Elixir CSV data (LCK 2025 + 2026)
-2. Filter `position == 'team'` and `league == 'LCK'`
-3. Compute rolling features with `shift(1)` to prevent data leakage
-4. Merge Blue/Red rows per game to create diff features
-5. Train Logistic Regression with StandardScaler
-6. Save model + scaler + featured data as `.pkl`
-
-## Schedule Data
-
-Match schedule (90 matches, 2026 Spring Split) is stored in Supabase and updated manually per round. Web scraping is intentionally avoided due to legal risk.
-
-**Supabase `schedule` table schema:**
-
-| Column | Type | Description |
-|--------|------|-------------|
-| `team_1` | text | Team abbreviation |
-| `team_2` | text | Team abbreviation |
-| `date` | date | Match date |
-| `time` | time | Match time |
-| `round` | int | Round number |
-| `split` | text | Spring / Summer |
-| `year` | int | Season year |
-| `winner` | text | Winner abbreviation (null if upcoming) |
-| `week` | int | Week number |
-
-## Supported Teams (2026 Season)
-
-| Code | Team |
-|------|------|
-| T1 | T1 |
-| GEN | Gen.G |
-| HLE | Hanwha Life Esports |
-| DK | Dplus KIA |
-| KT | KT Rolster |
-| BFX | BNK FEARX |
-| NS | Nongshim RedForce |
-| KRX | DRX |
-| DNS | DN SOOPers |
-| BRO | HANJIN BRION |
-
-## Versioning Roadmap
-
-| Version | Features | Status |
-|---------|----------|--------|
-| v1 | Match schedule + ML win prediction | ✅ Complete |
-| v2 | RAG + LangChain Agent for team/player Q&A | 🔨 In Progress |
-| v3 | Betting point system + user login | 📋 Planned |
-| v4 | Model Update | 📋 Planned |
+Research scripts and evidence live under `backend/training/` and `notebook/experiments/`. Experiment 10 is the deployed-model reference; experiments 11–14 did not replace it. Raw Oracle's Elixir data and secrets are excluded from Git. The weekly workflow audits legacy team-model candidates and does not automatically promote a new player model.

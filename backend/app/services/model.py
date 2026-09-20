@@ -108,3 +108,44 @@ def get_feature_importance() -> dict:
         label_map[col]: round(float(val), 4)
         for col, val in zip(DIFF_COLS, coef)
     }
+
+# A single bundle atomically couples the MLP weights, scaler and current team state.
+from .mlp_runtime import predict_bundle
+MLP_PATH = BASE_DIR / 'models' / 'lck_mlp.joblib'
+mlp_bundle = joblib.load(MLP_PATH) if MLP_PATH.exists() else None
+legacy_predict_match = predict_match
+legacy_feature_importance = get_feature_importance
+if mlp_bundle is not None:
+    FEATURE_COLS = mlp_bundle['feature_columns']
+    DIFF_COLS = mlp_bundle['diff_columns']
+    team_state = mlp_bundle['team_state']
+
+
+def predict_match(team1: str, team2: str, best_of: int = 3) -> dict:
+    if best_of not in (3, 5):
+        raise ValueError('best_of must be 3 or 5')
+    if mlp_bundle is None:
+        return legacy_predict_match(team1, team2)
+    t1, t2 = get_team_features(team1), get_team_features(team2)
+    diffs = {f'diff_{c}': t1[c] - t2[c] for c in FEATURE_COLS}
+    probability = float(predict_bundle(mlp_bundle, [diffs[c] for c in DIFF_COLS], best_of)[0])
+    return {'team1':team1,'team2':team2,'team1_win_rate':round(probability,4),
+            'team2_win_rate':round(1-probability,4),
+            'predicted_winner':team1 if probability>.5 else team2,
+            'best_of':best_of,'model_version':mlp_bundle['metadata']['version'],
+            'features':{**diffs,'is_bo5':float(best_of==5)},
+            'team1_stats':t1,'team2_stats':t2}
+
+
+def get_feature_importance() -> dict:
+    # An MLP has no logistic-regression coefficients. Do not mislabel its weights.
+    if mlp_bundle is not None:
+        return {'method':None,'message':'Global feature importance has not been estimated for this MLP.',
+                'feature_columns':DIFF_COLS+['is_bo5']}
+    return legacy_feature_importance()
+
+
+def get_model_metadata() -> dict:
+    if mlp_bundle is None:
+        return {'model_type':'LogisticRegression'}
+    return mlp_bundle['metadata']

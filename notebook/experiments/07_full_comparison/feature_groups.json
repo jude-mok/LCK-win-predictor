@@ -1,0 +1,357 @@
+{
+  "base_7": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate"
+  ],
+  "lead10_baron_9": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_firstbaron_rate"
+  ],
+  "lead15_baron_9": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_firstbaron_rate"
+  ],
+  "lead20_baron_9": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "strong_lead15_8": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate"
+  ],
+  "original_lead15_9": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_lead15_rate",
+    "diff_strong_lead15_rate"
+  ],
+  "minimal_3": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15"
+  ],
+  "search_02": [
+    "diff_roll_winrate",
+    "diff_strong_lead20_rate"
+  ],
+  "search_03": [
+    "diff_roll_winrate",
+    "diff_patch_winrate"
+  ],
+  "search_04": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_patch_winrate"
+  ],
+  "search_05": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon"
+  ],
+  "search_06": [
+    "diff_roll_winrate",
+    "diff_strong_lead15_rate"
+  ],
+  "search_07": [
+    "diff_roll_winrate"
+  ],
+  "search_08": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_strong_lead15_rate"
+  ],
+  "search_09": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_firstbaron_rate"
+  ],
+  "search_10": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_strong_lead20_rate"
+  ],
+  "search_11": [
+    "diff_roll_winrate",
+    "diff_firstbaron_rate"
+  ],
+  "search_12": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_13": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstherald"
+  ],
+  "search_14": [
+    "diff_roll_winrate",
+    "diff_roll_firsttower"
+  ],
+  "search_15": [
+    "diff_roll_winrate",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_16": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_17": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_18": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firsttower"
+  ],
+  "search_19": [
+    "diff_roll_winrate",
+    "diff_roll_firstdragon"
+  ],
+  "search_20": [
+    "diff_roll_golddiff15"
+  ],
+  "search_21": [
+    "diff_strong_lead20_rate"
+  ],
+  "search_22": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_23": [
+    "diff_roll_winrate",
+    "diff_roll_firstherald"
+  ],
+  "search_24": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate"
+  ],
+  "search_25": [
+    "diff_strong_lead15_rate"
+  ],
+  "search_27": [
+    "diff_firstbaron_rate"
+  ],
+  "search_28": [
+    "diff_roll_winrate",
+    "diff_strong_lead10_rate"
+  ],
+  "search_29": [
+    "diff_roll_firsttower"
+  ],
+  "search_30": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_32": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_33": [
+    "diff_roll_firstdragon"
+  ],
+  "search_34": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_strong_lead10_rate"
+  ],
+  "search_36": [
+    "diff_patch_winrate"
+  ],
+  "search_37": [
+    "diff_strong_lead10_rate"
+  ],
+  "search_39": [
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_40": [
+    "diff_roll_firstherald"
+  ],
+  "search_41": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_42": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_43": [
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_44": [
+    "diff_roll_winrate",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_45": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate"
+  ],
+  "search_46": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_47": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_48": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_firstbaron_rate"
+  ],
+  "search_49": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_strong_lead10_rate",
+    "diff_strong_lead15_rate",
+    "diff_strong_lead20_rate",
+    "diff_firstbaron_rate"
+  ]
+}

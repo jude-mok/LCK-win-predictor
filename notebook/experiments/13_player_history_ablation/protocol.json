@@ -1,0 +1,40 @@
+{
+  "architecture": "A: shared d\u21928\u21924, five role-specific 4\u21922\u21921 heads, sum and team difference",
+  "primary_metric": "2025 chronological out-of-fold ensemble series accuracy; log loss tie-break",
+  "feature_search": "13 leave-one-feature-out candidates; optional joint removal of up to 3 individually helpful features; all13 remains eligible",
+  "joint_rule": "Remove up to 3 features with higher CV accuracy AND lower log loss than all13, ranked by accuracy then log loss",
+  "reduction_rule": "Use best reduced candidate only if CV correct count exceeds all13; else retain all13",
+  "outer_folds": "2025 series dates: first40% train, next20% test; expand to60%,80% train",
+  "epoch_selection": "inner last20% of available2025 series dates, series log loss, max500 patience30; then refit entire prefix",
+  "final_fit": "epoch selection on same2025 last33series as baseline; refit selected years",
+  "history_regimes": [
+    [
+      2025
+    ],
+    [
+      2024,
+      2025
+    ],
+    [
+      2023,
+      2024,
+      2025
+    ]
+  ],
+  "league": "LCK only; equal weight per training set",
+  "history_control": "2025 and2026 player inputs EXACTLY baseline; older years processed separately with own within-year rolling histories",
+  "initialization": "same original13-input initial weights; remove columns only, preserve downstream weights across feature ablations",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "optimizer": "Adam .001, full batch, BCEWithLogitsLoss",
+  "warnings": [
+    "2025 CV used for selection; winner score is optimistically selected, not independent test.",
+    "2026 repeatedly inspected in project; retrospective audit only, no fitting/selection in this run.",
+    "First-set roster known; iid set-to-series conversion; no draft or later substitutions.",
+    "Feature removal changes capacity and optimization too; not causal evidence a statistic is harmful.",
+    "Extra historical records do not warm-start2025 input history in this controlled comparison."
+  ]
+}

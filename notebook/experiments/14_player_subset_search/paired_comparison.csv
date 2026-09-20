@@ -1,0 +1,9 @@
+candidate,new_only_correct,reference_only_correct,both_correct,both_wrong
+pooled_2023_2025,4,12,106,64
+pooled_2025_scaler,1,8,110,67
+pooled_matched_epochs,0,8,110,68
+pooled_recent_weights,2,11,107,66
+reference_2025,0,0,118,68
+selected_2023_2025,6,9,109,62
+selected_2024_2025,5,14,104,63
+selected_2025,2,14,104,66

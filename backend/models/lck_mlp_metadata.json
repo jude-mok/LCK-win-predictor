@@ -1,0 +1,194 @@
+{
+  "model_type": "MLP 9-16-8-1, three-seed probability ensemble",
+  "created_at": "2026-09-20T17:38:38.380646+00:00",
+  "game_count": 1053,
+  "series_count": 395,
+  "latest_game_date": "2026-09-12T08:21:21",
+  "feature_columns": [
+    "roll_winrate",
+    "roll_golddiff15",
+    "roll_firstdragon",
+    "roll_firstherald",
+    "roll_firsttower",
+    "patch_winrate",
+    "strong_lead10_rate",
+    "firstbaron_rate"
+  ],
+  "input_columns": [
+    "diff_roll_winrate",
+    "diff_roll_golddiff15",
+    "diff_roll_firstdragon",
+    "diff_roll_firstherald",
+    "diff_roll_firsttower",
+    "diff_patch_winrate",
+    "diff_strong_lead10_rate",
+    "diff_firstbaron_rate",
+    "is_bo5"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_sha256": {
+    "2025_LoL_esports_match_data_from_OraclesElixir.csv": "c9a158b9e0a965a47d31d3674c127a26f75e6c91a324bd1858e4784b1336214a",
+    "2026_LoL_esports_match_data_from_OraclesElixir.csv": "024330eb7a03e07c1aba55e17abf2e55f8e79e46e42e3f47389194173e59730a"
+  },
+  "walk_forward": {
+    "series_count": 232,
+    "folds": [
+      {
+        "fold": 1,
+        "fit": 64,
+        "early_stop": 20,
+        "future": 84,
+        "future_start": "2025-05-03 06:07:27",
+        "future_end": "2025-08-14 10:09:25"
+      },
+      {
+        "fold": 2,
+        "fit": 132,
+        "early_stop": 36,
+        "future": 70,
+        "future_start": "2025-08-15 08:06:45",
+        "future_end": "2026-02-07 10:09:22"
+      },
+      {
+        "fold": 3,
+        "fit": 198,
+        "early_stop": 40,
+        "future": 78,
+        "future_start": "2026-02-08 08:06:06",
+        "future_end": "2026-05-16 08:05:55"
+      }
+    ],
+    "seed_mean": {
+      "accuracy": 0.57183908045977,
+      "log_loss": 0.6716488630966513,
+      "brier_score": 0.23958679188402365,
+      "roc_auc": 0.6115694289607333
+    },
+    "ensemble": {
+      "accuracy": 0.5775862068965517,
+      "roc_auc": 0.6156819026384245,
+      "log_loss": 0.6704216436394712,
+      "brier_score": 0.2389572420581133,
+      "probability_min": 0.22402121623357138,
+      "probability_max": 0.7446938951810201
+    },
+    "fold_seed_scores": [
+      {
+        "fold": 1,
+        "variant": "lead10_baron_9",
+        "seed": 42,
+        "n": 84,
+        "epoch": 145,
+        "log_loss": 0.6914780495483904,
+        "brier": 0.24919311702251434,
+        "accuracy": 0.5476190476190477
+      },
+      {
+        "fold": 1,
+        "variant": "lead10_baron_9",
+        "seed": 43,
+        "n": 84,
+        "epoch": 113,
+        "log_loss": 0.6763981632408715,
+        "brier": 0.2423095703125,
+        "accuracy": 0.5
+      },
+      {
+        "fold": 1,
+        "variant": "lead10_baron_9",
+        "seed": 44,
+        "n": 84,
+        "epoch": 200,
+        "log_loss": 0.7010163839728023,
+        "brier": 0.2542460262775421,
+        "accuracy": 0.47619047619047616
+      },
+      {
+        "fold": 2,
+        "variant": "lead10_baron_9",
+        "seed": 42,
+        "n": 70,
+        "epoch": 138,
+        "log_loss": 0.6901312447223131,
+        "brier": 0.2486243098974228,
+        "accuracy": 0.5285714285714286
+      },
+      {
+        "fold": 2,
+        "variant": "lead10_baron_9",
+        "seed": 43,
+        "n": 70,
+        "epoch": 93,
+        "log_loss": 0.6850351746555065,
+        "brier": 0.24612317979335785,
+        "accuracy": 0.5142857142857142
+      },
+      {
+        "fold": 2,
+        "variant": "lead10_baron_9",
+        "seed": 44,
+        "n": 70,
+        "epoch": 160,
+        "log_loss": 0.6927104599717937,
+        "brier": 0.2500374913215637,
+        "accuracy": 0.45714285714285713
+      },
+      {
+        "fold": 3,
+        "variant": "lead10_baron_9",
+        "seed": 42,
+        "n": 78,
+        "epoch": 104,
+        "log_loss": 0.6278487783270964,
+        "brier": 0.21797382831573486,
+        "accuracy": 0.6666666666666666
+      },
+      {
+        "fold": 3,
+        "variant": "lead10_baron_9",
+        "seed": 43,
+        "n": 78,
+        "epoch": 35,
+        "log_loss": 0.6542462081782074,
+        "brier": 0.23065264523029327,
+        "accuracy": 0.7307692307692307
+      },
+      {
+        "fold": 3,
+        "variant": "lead10_baron_9",
+        "seed": 44,
+        "n": 78,
+        "epoch": 84,
+        "log_loss": 0.6272543597081047,
+        "brier": 0.2177140712738037,
+        "accuracy": 0.717948717948718
+      }
+    ]
+  },
+  "recent_audit": {
+    "series_count": 79,
+    "first_date": "2026-05-16T11:30:05",
+    "last_date": "2026-09-12T05:21:16",
+    "metrics": {
+      "accuracy": 0.5443037974683544,
+      "roc_auc": 0.587012987012987,
+      "log_loss": 0.6930739487534424,
+      "brier_score": 0.24956215918064117,
+      "probability_min": 0.20854973793029785,
+      "probability_max": 0.8406569361686707
+    },
+    "note": "Previously inspected test period; descriptive audit, not untouched test."
+  },
+  "evaluation_note": "Feature choices informed by development results. 70.51% is a seed mean on one 78-series fold, not overall or production accuracy.",
+  "published": true,
+  "version": "d45862b62ba0",
+  "final_epochs": [
+    125,
+    64,
+    122
+  ]
+}

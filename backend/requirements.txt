@@ -1,9 +1,1 @@
-fastapi
-uvicorn
-joblib
-scikit-learn
-pandas
-numpy
-python-dotenv
-pydantic
-supabase
+-r serving-requirements.txt

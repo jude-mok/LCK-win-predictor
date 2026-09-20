@@ -1,0 +1,44 @@
+{
+  "leagues_requested": [
+    "LCK",
+    "LEC",
+    "LTA N",
+    "LPL",
+    "VCS"
+  ],
+  "variants": {
+    "selected_baseline": [
+      13,
+      0
+    ],
+    "player_leads": [
+      16,
+      0
+    ],
+    "team_lead_frequency": [
+      16,
+      4
+    ],
+    "team_lead_conversion": [
+      16,
+      5
+    ]
+  },
+  "train_year": 2025,
+  "test": "2026 LCK same186series",
+  "player_extras": [
+    "past_gold_lead15_rate",
+    "past_xp_lead15_rate",
+    "past_cs_lead15_rate"
+  ],
+  "team_leads": [
+    "team_mean_gold15",
+    "team_lead15_rate",
+    "team_strong_lead15_rate",
+    "team_history_fraction"
+  ],
+  "conversion": "(past5 lead wins +1)/(past5 lead count+2), lead=gold15>0",
+  "controls": "A additive architecture; original13 LCK inputs unchanged; same2025 LCK val33; seeds42/43/44; no manual feature weight boosts",
+  "history": "LCK-only histories for LCK; selected non-LCK player histories pooled; non-LCK teams grouped by league+name",
+  "warning": "2026 reused retrospective test; first-set roster known; iid series conversion; LPL mandatory lead fields missing."
+}

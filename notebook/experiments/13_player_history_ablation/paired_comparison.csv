@@ -1,0 +1,7 @@
+candidate,new_only_correct,baseline_only_correct,both_correct,both_wrong
+all13_2023_2024_2025,4,12,106,64
+all13_2024_2025,2,8,110,66
+all13_2025,0,0,118,68
+reduced_2023_2024_2025,6,9,109,62
+reduced_2024_2025,5,14,104,63
+reduced_2025,2,14,104,66

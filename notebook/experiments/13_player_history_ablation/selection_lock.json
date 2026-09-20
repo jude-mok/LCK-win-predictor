@@ -1,0 +1,191 @@
+{
+  "selected_feature_candidate": "without_past_xpdiffat15",
+  "selected_features": [
+    "past_result",
+    "past_golddiffat15",
+    "past_csdiffat15",
+    "past_kills_per_min",
+    "past_deaths_per_min",
+    "past_assists_per_min",
+    "past_dpm",
+    "past_damageshare",
+    "past_earnedgoldshare",
+    "past_cspm",
+    "past_vision_per_min",
+    "history_fraction"
+  ],
+  "chosen_using_2025": "reduced_2023_2024_2025",
+  "configs": {
+    "all13_2025": {
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2025
+      ],
+      "epochs": [
+        8,
+        7,
+        77
+      ],
+      "train_sets": 555,
+      "parameters_per_seed": 213
+    },
+    "all13_2024_2025": {
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "epochs": [
+        1,
+        2,
+        68
+      ],
+      "train_sets": 1037,
+      "parameters_per_seed": 213
+    },
+    "all13_2023_2024_2025": {
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "epochs": [
+        1,
+        2,
+        67
+      ],
+      "train_sets": 1524,
+      "parameters_per_seed": 213
+    },
+    "reduced_2025": {
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2025
+      ],
+      "epochs": [
+        25,
+        37,
+        78
+      ],
+      "train_sets": 555,
+      "parameters_per_seed": 205
+    },
+    "reduced_2024_2025": {
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2024,
+        2025
+      ],
+      "epochs": [
+        58,
+        1,
+        69
+      ],
+      "train_sets": 1037,
+      "parameters_per_seed": 205
+    },
+    "reduced_2023_2024_2025": {
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "epochs": [
+        20,
+        1,
+        67
+      ],
+      "train_sets": 1524,
+      "parameters_per_seed": 205
+    }
+  },
+  "training_counts": {
+    "2023": 487,
+    "2024": 482,
+    "2025": 555
+  },
+  "ensemble": "mean set probabilities of three seeds, then series polynomial"
+}

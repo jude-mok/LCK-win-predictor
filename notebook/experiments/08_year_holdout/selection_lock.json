@@ -1,0 +1,26 @@
+{
+  "variant": "candidate_08",
+  "columns": [
+    "diff_strong_lead15_rate",
+    "is_bo5"
+  ],
+  "epochs": {
+    "42": 1,
+    "43": 38,
+    "44": 1
+  },
+  "train_series": 209,
+  "train_start": "2025-01-15 08:09:30",
+  "train_end": "2025-09-28 05:30:31",
+  "selection_metrics": {
+    "variant": "candidate_08",
+    "input_count": 2,
+    "n": 159,
+    "accuracy": 0.6477987421383647,
+    "roc_auc": 0.6308203991130821,
+    "log_loss": 0.6897890886531216,
+    "brier_score": 0.24832374348448763,
+    "probability_min": 0.4052920341491699,
+    "probability_max": 0.5947079956531525
+  }
+}

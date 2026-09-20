@@ -70,14 +70,14 @@ jobs:
 
       - name: Train and evaluate candidate model
         run: |
-          uv run python -m backend.training.train_model \
-            --input backend/data/processed/lck_team_games.csv.gz
+          uv run python -m backend.training.train_mlp
 
       - name: Smoke test published or existing model
         run: |
           uv run python -c \
             "from backend.app.services.model import get_teams, predict_match; teams = get_teams(); assert len(teams) >= 2; print(predict_match(teams[0], teams[1]))"
 
+      # MLP candidates are audited weekly; publishing requires an explicit manual run.
       - name: Commit accepted model artifacts
         shell: bash
         run: |

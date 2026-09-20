@@ -1,0 +1,42 @@
+{
+  "train_year": 2025,
+  "evaluation_year": 2026,
+  "tracks": [
+    "position_additive",
+    "cross_position"
+  ],
+  "inputs": [
+    "past_result",
+    "past_golddiffat15",
+    "past_xpdiffat15",
+    "past_csdiffat15",
+    "past_kills_per_min",
+    "past_deaths_per_min",
+    "past_assists_per_min",
+    "past_dpm",
+    "past_damageshare",
+    "past_earnedgoldshare",
+    "past_cspm",
+    "past_vision_per_min",
+    "history_fraction"
+  ],
+  "roles": [
+    "top",
+    "jng",
+    "mid",
+    "bot",
+    "sup"
+  ],
+  "window": 5,
+  "seed_ensemble": [
+    42,
+    43,
+    44
+  ],
+  "architecture": "shared 13\u21928\u21924 player encoder; role-wise 4\u21922\u21921 sum vs joint 20\u21924\u21921 team head",
+  "training_target": "individual set win, one sample per set; series grouped in train/validation",
+  "selection": "last 20% of 2025 series dates for epoch selection by series log loss; max500 patience30",
+  "refit": "all 2025 sets for selected per-seed epochs; scaler fit only 2025",
+  "series_assumption": "first-set announced roster available; identical independent set win probabilities; no later drafts/roster substitutions",
+  "warning": "2026 previously inspected. Retrospective replay, not untouched test. best_of inferred from completed series scores."
+}

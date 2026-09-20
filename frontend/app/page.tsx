@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { api, Prediction } from "../lib/api";
 
 const TEAMS_MAP: Record<string, string> = {
   T1: "T1",
@@ -13,19 +14,6 @@ const TEAMS_MAP: Record<string, string> = {
   KRX: "키움 DRX",
   DNS: "DN 수퍼스",
   BRO: "한진 브리온",
-};
-
-const PREDICT_NAME_MAP: Record<string, string> = {
-  T1: "T1",
-  GEN: "Gen.G",
-  HLE: "Hanwha Life Esports",
-  DK: "Dplus Kia",
-  KT: "KT Rolster",
-  BFX: "BNK FEARX",
-  NS: "Nongshim RedForce",
-  KRX: "DRX",
-  DNS: "DN SOOPers",
-  BRO: "HANJIN BRION",
 };
 
 interface Match {
@@ -44,97 +32,50 @@ interface Match {
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"upcoming" | "finished">("upcoming");
-  const [predictions, setPredictions] = useState<Record<number, { blue: number; red: number }>>({});
+  const [predictions, setPredictions] = useState<Record<number, { blue: number; red: number; bestOf: number }>>({});
   const [currentWeek, setCurrentWeek] = useState<number>(1);
   const [activeWeek, setActiveWeek] = useState<number>(1);
   const [weekMatches, setWeekMatches] = useState<Match[]>([]);
   const [weekLoading, setWeekLoading] = useState(false);
 
-  // 현재 week 번호 가져오기
+  const [error, setError] = useState("");
   useEffect(() => {
-    fetch("https://lck-win-predictor-production.up.railway.app/schedule/")
-      .then((res) => res.json())
-      .then((data: Match[]) => {
-        if (data.length > 0) {
-          setCurrentWeek(data[0].week);
-          setActiveWeek(data[0].week);
-        }
-        setLoading(false);
-      });
+    let cancelled = false;
+    api<Match[]>("/schedule/").then(data => {
+      if (!cancelled && data.length) {
+        setCurrentWeek(data[0].week);
+        setActiveWeek(data[0].week);
+      }
+    }).catch(() => { /* Week selection remains available outside the season. */ })
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
   }, []);
 
-  // week별 경기 데이터 + AI 예측
   useEffect(() => {
-    if (currentWeek === 0) return;
-    setWeekLoading(true);
-
-    fetch(`https://lck-win-predictor-production.up.railway.app/schedule/entire/week/${currentWeek}`)
-      .then((res) => res.json())
-      .then(async (data: Match[]) => {
+    let cancelled = false;
+    async function load() {
+      setWeekLoading(true);
+      setError("");
+      setPredictions({});
+      try {
+        const data = await api<Match[]>(`/schedule/entire/week/${currentWeek}`);
+        if (cancelled) return;
         setWeekMatches(data);
-        setWeekLoading(false);
-
-        const upcoming = data.filter((m) => m.winner === "NULL" || !m.winner);
-        const results: Record<number, { blue: number; red: number }> = {};
-
-        await Promise.all(
-          upcoming.map(async (match) => {
-            try {
-              const res = await fetch("https://lck-win-predictor-production.up.railway.app/predict/predict", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                  team1: PREDICT_NAME_MAP[match.team_1],
-                  team2: PREDICT_NAME_MAP[match.team_2],
-                }),
-              });
-              const pred = await res.json();
-              results[match.id] = {
-                blue: Math.round(pred.team1_win_rate * 100),
-                red: Math.round(pred.team2_win_rate * 100),
-              };
-            } catch (e) {
-              console.error(e);
-            }
-          })
-        );
-
-        setPredictions((prev) => ({ ...prev, ...results }));
-      });
-  }, [currentWeek]);
-
-  // finished 탭 AI 예측 lazy loading
-  useEffect(() => {
-    if (filter !== "finished") return;
-
-    const finished = weekMatches.filter((m) => m.winner && m.winner !== "NULL");
-    const results: Record<number, { blue: number; red: number }> = { ...predictions };
-
-    const toFetch = finished.filter((m) => !predictions[m.id]);
-    if (toFetch.length === 0) return;
-
-    Promise.all(
-      toFetch.map(async (match) => {
-        try {
-          const res = await fetch("https://lck-win-predictor-production.up.railway.app/predict/predict", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              team1: PREDICT_NAME_MAP[match.team_1],
-              team2: PREDICT_NAME_MAP[match.team_2],
-            }),
+        const results = await Promise.all(data.map(async match => {
+          const p = await api<Prediction>("/predict/predict", {
+            method: "POST", headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({team1: match.team_1, team2: match.team_2, best_of: 3}),
           });
-          const pred = await res.json();
-          results[match.id] = {
-            blue: Math.round(pred.team1_win_rate * 100),
-            red: Math.round(pred.team2_win_rate * 100),
-          };
-        } catch (e) {
-          console.error(e);
-        }
-      })
-    ).then(() => setPredictions({ ...results }));
-  }, [filter, weekMatches.length]);
+          return [match.id, {blue: Math.round(p.team1_win_rate * 100), red: Math.round(p.team2_win_rate * 100), bestOf: p.best_of}];
+        }));
+        if (!cancelled) setPredictions(Object.fromEntries(results));
+      } catch (e) {
+        if (!cancelled) setError(e instanceof Error ? e.message : "불러오지 못했습니다.");
+      } finally { if (!cancelled) setWeekLoading(false); }
+    }
+    void load();
+    return () => { cancelled = true; };
+  }, [currentWeek]);
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -176,6 +117,8 @@ export default function Home() {
           <div className="lg:col-span-8 space-y-10">
             <header className="space-y-8">
               <h1 className="text-5xl font-extrabold tracking-tight">LCK 경기 예측</h1>
+              <p>DB에 설정된 Main 선수 기준으로 계산합니다. 경기를 누르면 선수를 교체할 수 있습니다. 완료 경기도 현재 명단으로 계산한 값입니다.</p>
+              {error && <p role="alert" className="text-red-700">{error}</p>}
 
               {/* 예정 / 완료 탭 */}
               <div className="flex gap-2 p-1.5 bg-[#f2f3ff] w-fit rounded-full">
@@ -255,7 +198,7 @@ export default function Home() {
 
                         <div className="flex flex-col items-center gap-1">
                           <span className="text-xs font-bold text-[#004ecb] bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest">
-                            BO3
+                            {predictions[match.id] ? `BO${predictions[match.id].bestOf}` : "LCK"}
                           </span>
                           <span className="text-3xl font-black text-[#d8d9e6]">VS</span>
                           <span className="text-xs font-medium text-[#424656]">
@@ -314,7 +257,7 @@ export default function Home() {
                         <div className="flex justify-between text-xs font-bold uppercase tracking-tight">
                           <span className="text-[#424656] flex items-center gap-1.5">
                             <span className="material-symbols-outlined text-[14px]">smart_toy</span>
-                            AI 모델 예측
+                            {predictions[match.id] ? "현재 Main 기준 · BO3" : "예측 불러오는 중"}
                           </span>
                           <div className="flex gap-4">
                             <span className="text-[#004ecb]">
@@ -328,11 +271,11 @@ export default function Home() {
                         <div className="h-1.5 w-full bg-[#e6e7f4] rounded-full overflow-hidden flex">
                           <div
                             className="h-full bg-[#004ecb]/60 transition-all duration-700"
-                            style={{ width: `${predictions[match.id]?.blue ?? 50}%` }}
+                            style={{ width: `${predictions[match.id]?.blue ?? 0}%` }}
                           ></div>
                           <div
                             className="h-full bg-[#a03200]/10 transition-all duration-700"
-                            style={{ width: `${predictions[match.id]?.red ?? 50}%` }}
+                            style={{ width: `${predictions[match.id]?.red ?? 0}%` }}
                           ></div>
                         </div>
                       </div>

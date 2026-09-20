@@ -1,0 +1,218 @@
+[
+  {
+    "candidate": "reference_2025",
+    "fold": 1,
+    "epochs": [
+      46,
+      233,
+      180
+    ]
+  },
+  {
+    "candidate": "reference_2025",
+    "fold": 2,
+    "epochs": [
+      488,
+      350,
+      225
+    ]
+  },
+  {
+    "candidate": "reference_2025",
+    "fold": 3,
+    "epochs": [
+      156,
+      94,
+      96
+    ]
+  },
+  {
+    "candidate": "pooled_2023_2025",
+    "fold": 1,
+    "epochs": [
+      218,
+      392,
+      218
+    ]
+  },
+  {
+    "candidate": "pooled_2023_2025",
+    "fold": 2,
+    "epochs": [
+      274,
+      95,
+      90
+    ]
+  },
+  {
+    "candidate": "pooled_2023_2025",
+    "fold": 3,
+    "epochs": [
+      110,
+      88,
+      82
+    ]
+  },
+  {
+    "candidate": "pooled_2025_scaler",
+    "fold": 1,
+    "epochs": [
+      210,
+      285,
+      188
+    ]
+  },
+  {
+    "candidate": "pooled_2025_scaler",
+    "fold": 2,
+    "epochs": [
+      290,
+      228,
+      91
+    ]
+  },
+  {
+    "candidate": "pooled_2025_scaler",
+    "fold": 3,
+    "epochs": [
+      125,
+      86,
+      82
+    ]
+  },
+  {
+    "candidate": "pooled_recent_weights",
+    "fold": 1,
+    "epochs": [
+      294,
+      392,
+      108
+    ]
+  },
+  {
+    "candidate": "pooled_recent_weights",
+    "fold": 2,
+    "epochs": [
+      248,
+      299,
+      88
+    ]
+  },
+  {
+    "candidate": "pooled_recent_weights",
+    "fold": 3,
+    "epochs": [
+      113,
+      93,
+      82
+    ]
+  },
+  {
+    "candidate": "pooled_matched_epochs",
+    "fold": 1,
+    "epochs": [
+      46,
+      233,
+      180
+    ]
+  },
+  {
+    "candidate": "pooled_matched_epochs",
+    "fold": 2,
+    "epochs": [
+      488,
+      350,
+      225
+    ]
+  },
+  {
+    "candidate": "pooled_matched_epochs",
+    "fold": 3,
+    "epochs": [
+      156,
+      94,
+      96
+    ]
+  },
+  {
+    "candidate": "selected_2025",
+    "fold": 1,
+    "epochs": [
+      162,
+      174,
+      169
+    ]
+  },
+  {
+    "candidate": "selected_2025",
+    "fold": 2,
+    "epochs": [
+      235,
+      186,
+      282
+    ]
+  },
+  {
+    "candidate": "selected_2025",
+    "fold": 3,
+    "epochs": [
+      110,
+      88,
+      101
+    ]
+  },
+  {
+    "candidate": "selected_2024_2025",
+    "fold": 1,
+    "epochs": [
+      348,
+      213,
+      210
+    ]
+  },
+  {
+    "candidate": "selected_2024_2025",
+    "fold": 2,
+    "epochs": [
+      108,
+      99,
+      92
+    ]
+  },
+  {
+    "candidate": "selected_2024_2025",
+    "fold": 3,
+    "epochs": [
+      98,
+      93,
+      81
+    ]
+  },
+  {
+    "candidate": "selected_2023_2025",
+    "fold": 1,
+    "epochs": [
+      260,
+      246,
+      249
+    ]
+  },
+  {
+    "candidate": "selected_2023_2025",
+    "fold": 2,
+    "epochs": [
+      292,
+      97,
+      93
+    ]
+  },
+  {
+    "candidate": "selected_2023_2025",
+    "fold": 3,
+    "epochs": [
+      100,
+      95,
+      83
+    ]
+  }
+]

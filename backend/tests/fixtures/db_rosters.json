@@ -1,0 +1,1162 @@
+[
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "top",
+    "player_name": "Doran",
+    "player_id": "oe:player:a1f3b2bb3f36e5113237f92d76dc4c8",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "jng",
+    "player_name": "Oner",
+    "player_id": "oe:player:f8b68f268106124fc4bc1c946adc9b0",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "mid",
+    "player_name": "Faker",
+    "player_id": "oe:player:e1edfc5cea461399a63cb813cf795cc",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "bot",
+    "player_name": "Peyz",
+    "player_id": "oe:player:5bbc2b92348d930ebd500cb9ce71bb7",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "sup",
+    "player_name": "Keria",
+    "player_id": "oe:player:db79ce6ad35451c938fbe2995dabd37",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "top",
+    "player_name": "Guardian",
+    "player_id": "oe:player:5dbac11c1e86bdeea9a21039902ec82",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T06:42:09+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "top",
+    "player_name": "Haetae",
+    "player_id": "oe:player:9fefcdafef82ae8de67c1187546d622",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "jng",
+    "player_name": "Carim",
+    "player_id": "oe:player:e9df36f0c0ce44566f124524d7d904a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-14T04:06:21+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "jng",
+    "player_name": "Painter",
+    "player_id": "oe:player:4d08cbf857994dc42e1b09205158e15",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "mid",
+    "player_name": "Guti",
+    "player_id": "oe:player:3950b27e47e381e26f4678ced12bc45",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "bot",
+    "player_name": "Cypher",
+    "player_id": "oe:player:31edd1e8359d849e250b854826b8c38",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:04:54+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "bot",
+    "player_name": "Eclipse",
+    "player_id": "oe:player:5614c643c96cea5858c696eee9d509b",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "bot",
+    "player_name": "Jinbeom",
+    "player_id": "oe:player:4438e6de86f317adec821c223d661c8",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-07T05:57:19+00:00"
+  },
+  {
+    "team_code": "T1",
+    "team_name": "T1",
+    "position": "sup",
+    "player_name": "Cloud",
+    "player_id": "oe:player:c8fe7c65a2ae0ab6ff62674ade6847d",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "top",
+    "player_name": "Kiin",
+    "player_id": "oe:player:03daae1844b9ad257324c3eedf41e28",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-05T11:12:55+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "jng",
+    "player_name": "Canyon",
+    "player_id": "oe:player:92544d7a994bd6841cccd9f6e42e3de",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-05T11:12:55+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "mid",
+    "player_name": "Chovy",
+    "player_id": "oe:player:fb6e61b8acb05df17b7e5ad4ae7c800",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-05T11:12:55+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "bot",
+    "player_name": "Ruler",
+    "player_id": "oe:player:eada4723af6f51cf2391d85b5fde49b",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-05T11:12:55+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "sup",
+    "player_name": "Duro",
+    "player_id": "oe:player:605821ebcf6a2e53f03ec6e8e463d1b",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-05T11:12:55+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "top",
+    "player_name": "Ripple",
+    "player_id": "oe:player:c0062863e3e99f67607ad1ae9a4299a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:51:06+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "jng",
+    "player_name": "Courage",
+    "player_id": "oe:player:4e07c3a412cda9ddf875cc14c65efc4",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:51:06+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "mid",
+    "player_name": "Kemish",
+    "player_id": "oe:player:6de9a45a1a666afa34d126f9be444c0",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:51:06+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "bot",
+    "player_name": "MUDAI",
+    "player_id": "oe:player:fc222b2fd22414e0b9e40aaee65fcb5",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:51:06+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "bot",
+    "player_name": "SIRIUSS",
+    "player_id": "oe:player:3488a62df4bac987d1f36cfad34acbc",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-29T05:52:42+00:00"
+  },
+  {
+    "team_code": "GEN",
+    "team_name": "Gen.G",
+    "position": "sup",
+    "player_name": "Lumos",
+    "player_id": "oe:player:6b28fcee6b9d1ddf7c2e481e7fc1c0e",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-21T05:51:06+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "top",
+    "player_name": "Zeus",
+    "player_id": "oe:player:98dd15c330fb5abb4508347265a7f76",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "jng",
+    "player_name": "Kanavi",
+    "player_id": "oe:player:41deab55354f57a94135989133f9968",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "mid",
+    "player_name": "Zeka",
+    "player_id": "oe:player:f9cd2ef9afea5cda0eb3263a025cec1",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "bot",
+    "player_name": "Gumayusi",
+    "player_id": "oe:player:c7319736816efe935787b4381c6f321",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "sup",
+    "player_name": "Delight",
+    "player_id": "oe:player:051ca2e31ba25123961b3df95fdef4c",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-12T08:21:21+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "top",
+    "player_name": "Panther",
+    "player_id": "oe:player:d22a9f456619f24133f9d0ddff50051",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-24T11:25:57+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "jng",
+    "player_name": "Jackal",
+    "player_id": "oe:player:c5297b90d38a4be4c290d17de208d7a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-24T11:25:57+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "mid",
+    "player_name": "Cracker",
+    "player_id": "oe:player:e6d554ea9906d8f2fc26d076d2d4a4c",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-24T11:25:57+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "bot",
+    "player_name": "Pyeonsik",
+    "player_id": "oe:player:951959a620881940ca08f98e0226cf3",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-24T11:25:57+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "sup",
+    "player_name": "Bluffing",
+    "player_id": "oe:player:51e528aaaafe5451e0a14c0da847dc4",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-24T11:25:57+00:00"
+  },
+  {
+    "team_code": "HLE",
+    "team_name": "Hanwha Life Esports",
+    "position": "sup",
+    "player_name": "Valiant",
+    "player_id": "oe:player:6add4da3b26a48ccca716c112c3ff48",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-19T06:08:57+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "top",
+    "player_name": "Siwoo",
+    "player_id": "oe:player:da9f969a7ab3819b9e528072aa4d5e6",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-06T11:11:44+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "jng",
+    "player_name": "Lucid",
+    "player_id": "oe:player:10b86429ce8048aba673d802632e358",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-06T11:11:44+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "mid",
+    "player_name": "ShowMaker",
+    "player_id": "oe:player:5f8ff49cd56eae61d635966b183a451",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-06T11:11:44+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "bot",
+    "player_name": "Smash",
+    "player_id": "oe:player:eaebb7118d7bd83eabac513053e1f6c",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-06T11:11:44+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "sup",
+    "player_name": "Career",
+    "player_id": "oe:player:99e732def3601275db892c84fb85a0c",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-06T11:11:44+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "top",
+    "player_name": "Jaehyuk",
+    "player_id": "oe:player:686e3385a39e937956485d742b689e5",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "jng",
+    "player_name": "Solid",
+    "player_id": "oe:player:307b6fb75c459e5d0f628aa8e9e438c",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "mid",
+    "player_name": "Garden",
+    "player_id": "oe:player:26626eb3322fd706f5ca63fca2bb022",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "bot",
+    "player_name": "Wayne",
+    "player_id": "oe:player:bbd0c34fcf8166e45f1161815fefccf",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "DK",
+    "team_name": "Dplus Kia",
+    "position": "sup",
+    "player_name": "Loopy",
+    "player_id": "oe:player:e9741b3a238723ea6380ef2113fae63",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-10T10:47:39+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "top",
+    "player_name": "PerfecT",
+    "player_id": "oe:player:29bef8f5895e5e4fef8ff0945e68567",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-04T10:58:00+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "jng",
+    "player_name": "Cuzz",
+    "player_id": "oe:player:f9fe6d28d5b67bf9ac673b2cc8edf15",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-04T10:58:00+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "mid",
+    "player_name": "Bdd",
+    "player_id": "oe:player:30361653a485a9609fb2d3aa073282c",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-04T10:58:00+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "bot",
+    "player_name": "Jiwoo",
+    "player_id": "oe:player:8643b56ba8000250b81fdaca1d7f06e",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-04T10:58:00+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "sup",
+    "player_name": "Effort",
+    "player_id": "oe:player:035b9ae578574cdf728d8760483d804",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-04T10:58:00+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "top",
+    "player_name": "Sero",
+    "player_id": "oe:player:4c7da67b008cd8858cd0539c860c73a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "jng",
+    "player_name": "Sylvie",
+    "player_id": "oe:player:1a75a7cf8c98442be881fed562346f5",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "mid",
+    "player_name": "Hwichan",
+    "player_id": "oe:player:9c2752c1d6bb4dc3a7c3365c68271e3",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "bot",
+    "player_name": "Fenrir",
+    "player_id": "oe:player:d384cf5ad7db803f29799f36ebbc3ea",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-13T05:56:29+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "bot",
+    "player_name": "FenRir",
+    "player_id": "oe:player:655ff5d5e29058249fdf0ab0e1389f8",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "bot",
+    "player_name": "Ghost",
+    "player_id": "oe:player:78081d0b3c01f1f295d52d53744261a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-07T05:55:31+00:00"
+  },
+  {
+    "team_code": "KT",
+    "team_name": "KT Rolster",
+    "position": "sup",
+    "player_name": "Pollu",
+    "player_id": "oe:player:3126bca5d4d2555ba3b460699508e16",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "top",
+    "player_name": "Clear",
+    "player_id": "oe:player:d87853a5c1c5463889d70a62cdbcffc",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-03T11:59:51+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "jng",
+    "player_name": "Raptor",
+    "player_id": "oe:player:637ed20b1e41be1c51bd1a4cb211357",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-03T11:59:51+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "mid",
+    "player_name": "VicLa",
+    "player_id": "oe:player:d709285b163a94af9d819e568c592ba",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-03T11:59:51+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "bot",
+    "player_name": "Taeyoon",
+    "player_id": "oe:player:4047b7fecd736a6924aa13b05f42897",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-03T11:59:51+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "sup",
+    "player_name": "Kellin",
+    "player_id": "oe:player:b0ec3df39d61f953e7af0afd8eb8c4a",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-09-03T11:59:51+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "top",
+    "player_name": "Kangin",
+    "player_id": "oe:player:49c627c099821a2894c6c4dfd9274b3",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-25T10:58:49+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "jng",
+    "player_name": "Grizzly",
+    "player_id": "oe:player:655c522b43d1444e55a0a4615c2b59b",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-25T10:58:49+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "jng",
+    "player_name": "Zephyr",
+    "player_id": "oe:player:0cfe46c9ae6f1654b9363084c559648",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-28T06:54:25+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "mid",
+    "player_name": "Daystar",
+    "player_id": "oe:player:e68cc4b2bef76a96aae344b49a81579",
+    "league": "LCK",
+    "roster_status": "sub",
+    "roster_as_of": "2026-04-26T08:50:58+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "mid",
+    "player_name": "FIESTA",
+    "player_id": "oe:player:5ee64eb3feb02e60832a2265db54f71",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-28T06:54:25+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "mid",
+    "player_name": "MG",
+    "player_id": "oe:player:174d22de3c932c21ef6500eff012e12",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-25T10:58:49+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "bot",
+    "player_name": "Slayer",
+    "player_id": "oe:player:be17beb4d906e22fa6995e17060ebd3",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-25T10:58:49+00:00"
+  },
+  {
+    "team_code": "BFX",
+    "team_name": "BNK FEARX",
+    "position": "sup",
+    "player_name": "Luon",
+    "player_id": "oe:player:c60da5e574122ce50763b8bddb93ab9",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-25T10:58:49+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "top",
+    "player_name": "Kingen",
+    "player_id": "oe:player:618a87d272773f68239d8ce5555f39d",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-27T10:48:14+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "jng",
+    "player_name": "Sponge",
+    "player_id": "oe:player:3f4027dc08a489bd4d5390913f5dc71",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-27T10:48:14+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "mid",
+    "player_name": "Scout",
+    "player_id": "oe:player:71e79ef80600d398d90cfebe3b0b758",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-27T10:48:14+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "bot",
+    "player_name": "Diable",
+    "player_id": "oe:player:178ec186b0d43d2669342596c2808cd",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-27T10:48:14+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "sup",
+    "player_name": "Lehends",
+    "player_id": "oe:player:e4e24b8656e4e6a74b939af730b0148",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-27T10:48:14+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "top",
+    "player_name": "Janus",
+    "player_id": "oe:player:b8441a3fc649ee4789bc3ded34f46d6",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-09T11:52:39+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "jng",
+    "player_name": "MihawK",
+    "player_id": "oe:player:3be8d1a116788e4cd4853801a2e9a3d",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-09T11:52:39+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "mid",
+    "player_name": "SeTab",
+    "player_id": "oe:player:4ff7b91bbc9492e9f96d28dda496653",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-09T11:52:39+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "bot",
+    "player_name": "Lucy",
+    "player_id": "oe:player:dda950e6954035ff3f38b14ef7acc26",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-09T11:52:39+00:00"
+  },
+  {
+    "team_code": "NS",
+    "team_name": "Nongshim RedForce",
+    "position": "sup",
+    "player_name": "Pleata",
+    "player_id": "oe:player:7fdedd3126915607d5c8f42f8239253",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-09T11:52:39+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "top",
+    "player_name": "Frog",
+    "player_id": "oe:player:c942f21cd85aaf8d7892aa712e3e2ce",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "jng",
+    "player_name": "Willer",
+    "player_id": "oe:player:baf26814ef7b2f10fac33a00c3d53a3",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "mid",
+    "player_name": "Ucal",
+    "player_id": "oe:player:bd6a2e6aaeb993fd29f43790265297f",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "bot",
+    "player_name": "Aiming",
+    "player_id": "oe:player:85104684d1eb7f4c0ce393441a0b669",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "sup",
+    "player_name": "Minous",
+    "player_id": "oe:player:2f0b9f7cda18943425d555b51e570e8",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "top",
+    "player_name": "Rich",
+    "player_id": "oe:player:6fbf57b984dbf130701e09ea4110bb8",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "jng",
+    "player_name": "Winner",
+    "player_id": "oe:player:3e49e4fa76bc82c6f03a12d50ee0a6e",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-07T09:49:22+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "mid",
+    "player_name": "AKaJe",
+    "player_id": "oe:player:aa07cee593e6c3caeba21b4ee4c6075",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-07T09:49:22+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "bot",
+    "player_name": "LazyFeel",
+    "player_id": "oe:player:a41eb80b5f23627fc710cc41c516e49",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "bot",
+    "player_name": "Vincenzo",
+    "player_id": "oe:player:ab8a2f130a36f7aa619168c53d055d1",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-07T09:49:22+00:00"
+  },
+  {
+    "team_code": "KRX",
+    "team_name": "Kiwoom DRX",
+    "position": "sup",
+    "player_name": "Andil",
+    "player_id": "oe:player:5ef70ecd799a70ebbda239cd9a9f1e7",
+    "league": "LCK",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-22T11:31:02+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "top",
+    "player_name": "DuDu",
+    "player_id": "oe:player:6e6a78244523ed9e54731d07d1f79f4",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "jng",
+    "player_name": "Sharvel",
+    "player_id": "oe:player:18a70ca6e551b080cf886828cc18394",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "mid",
+    "player_name": "Clozer",
+    "player_id": "oe:player:6adb46561c24655e0455d9b3fdc5698",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "bot",
+    "player_name": "deokdam",
+    "player_id": "oe:player:18bdb3898e7fecb3bb0be7ff075d509",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "sup",
+    "player_name": "Peter",
+    "player_id": "oe:player:ee051912ad5f9a97aa9ce4980cbb481",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-22T12:30:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "top",
+    "player_name": "Lancer",
+    "player_id": "oe:player:f7407edad1ded2d8d1e634ed49a9698",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "jng",
+    "player_name": "DDoiV",
+    "player_id": "oe:player:67447707ec7cbde9ab25bfa2ed69877",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "jng",
+    "player_name": "Pyosik",
+    "player_id": "oe:player:a2357eb17578485c2ba736db36cbc42",
+    "league": "LCK",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-30T08:58:01+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "mid",
+    "player_name": "Flip",
+    "player_id": "oe:player:17ae4f247f5fc521bff004a97f4df72",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "bot",
+    "player_name": "Enosh",
+    "player_id": "oe:player:5836a085b5ebaa7662fbba55341703c",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "sup",
+    "player_name": "Life",
+    "player_id": "oe:player:dea5251e486aed942e1bc06e1d5c116",
+    "league": "LCK",
+    "roster_status": "sub",
+    "roster_as_of": "2026-05-15T11:12:17+00:00"
+  },
+  {
+    "team_code": "DNS",
+    "team_name": "DN SOOPers",
+    "position": "sup",
+    "player_name": "Quantum",
+    "player_id": "oe:player:c78788a736a0c7e5a77890144fd2986",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-09-11T11:00:21+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "top",
+    "player_name": "Casting",
+    "player_id": "oe:player:86a59ad7ba2334ad7505f303d3f2ab6",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-28T11:40:15+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "jng",
+    "player_name": "GIDEON",
+    "player_id": "oe:player:60b1614a632775c97a37a57bda799f2",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-28T11:40:15+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "mid",
+    "player_name": "Roamer",
+    "player_id": "oe:player:ea58943d300b14d684bb05b3975fe15",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-28T11:40:15+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "bot",
+    "player_name": "Teddy",
+    "player_id": "oe:player:2b5fa564a1259b97bc238fbfa719b07",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-28T11:40:15+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "sup",
+    "player_name": "Namgung",
+    "player_id": "oe:player:97cae9bbdbfe09bafe83c5a7bda0727",
+    "league": "LCK",
+    "roster_status": "Main",
+    "roster_as_of": "2026-08-28T11:40:15+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "top",
+    "player_name": "DDahyuk",
+    "player_id": "oe:player:e069ed7135e8a018823429510a1f8c1",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "jng",
+    "player_name": "Dinai",
+    "player_id": "oe:player:a4d15f165c20858e7781645fec016d1",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "mid",
+    "player_name": "Fisher",
+    "player_id": "oe:player:effd5b04b5d98b779f0a6162c40735a",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-02-04T09:55:24+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "mid",
+    "player_name": "Loki",
+    "player_id": "oe:player:0a53c1102dafce61e89decc517b3175",
+    "league": "LCK",
+    "roster_status": "sub",
+    "roster_as_of": "2026-06-06T09:57:23+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "mid",
+    "player_name": "Tempester",
+    "player_id": "oe:player:3d94511f748af7acb6347becd5b4c94",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "bot",
+    "player_name": "OddEye",
+    "player_id": "oe:player:94e5c960a512595b39fea5f350d7d0d",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  },
+  {
+    "team_code": "BRO",
+    "team_name": "HANJIN BRION",
+    "position": "sup",
+    "player_name": "PlanB",
+    "player_id": "oe:player:d7560fc4ec70f8b12e5dd435668b292",
+    "league": "LCK_CL",
+    "roster_status": "sub",
+    "roster_as_of": "2026-08-20T06:54:28+00:00"
+  }
+]

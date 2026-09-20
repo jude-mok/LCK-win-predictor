@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "713b793682088c343819a1a9f10886ed159492453b01db5e0e61f2f7a8f82b48",
+  "source_sha256": {
+    "2023": "8cf6c1bbe4a4c75a73d0a38fca826ecea48dd1fb386f515e2a7986797f7c1f3a",
+    "2024": "93b5ed6036435120d7d97541b947ffceed6c7158508df4e6cb9b0f8a35cb17ac",
+    "2025": "c9a158b9e0a965a47d31d3674c127a26f75e6c91a324bd1858e4784b1336214a",
+    "2026": "024330eb7a03e07c1aba55e17abf2e55f8e79e46e42e3f47389194173e59730a"
+  },
+  "checks": [
+    "all13_2025 predictions reproduce experiment10 within1e-6",
+    "2025 inputs unchanged when2026 appended",
+    "team swap symmetry",
+    "scalers fitted only on fitting data",
+    "2026 loaded after selection lock",
+    "checkpoint unchanged"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "variant": "search_20",
+  "input_columns": [
+    "diff_roll_golddiff15",
+    "is_bo5"
+  ],
+  "selection_rule": "pooled accuracy, then log loss",
+  "status": "retrospective candidate; not deployed",
+  "accuracy": 0.6237942122186495,
+  "recent_accuracy": 0.5189873417721519
+}

@@ -1,0 +1,278 @@
+{
+  "training_year": 2025,
+  "evaluation_year": 2026,
+  "selection": "2025 pooled walk-forward ensemble accuracy; ties: log loss, then input count",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": "per-seed median of selected model best epochs in 2025 folds; refit all 2025",
+  "window": 5,
+  "ensemble": "mean of 3 symmetrized probabilities",
+  "groups": {
+    "candidate_01": [
+      "diff_roll_winrate"
+    ],
+    "candidate_02": [
+      "diff_roll_golddiff15"
+    ],
+    "candidate_03": [
+      "diff_roll_firstdragon"
+    ],
+    "candidate_04": [
+      "diff_roll_firstherald"
+    ],
+    "candidate_05": [
+      "diff_roll_firsttower"
+    ],
+    "candidate_06": [
+      "diff_patch_winrate"
+    ],
+    "candidate_07": [
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_08": [
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_09": [
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_10": [
+      "diff_firstbaron_rate"
+    ],
+    "candidate_11": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15"
+    ],
+    "candidate_12": [
+      "diff_roll_winrate",
+      "diff_roll_firstdragon"
+    ],
+    "candidate_13": [
+      "diff_roll_winrate",
+      "diff_roll_firstherald"
+    ],
+    "candidate_14": [
+      "diff_roll_winrate",
+      "diff_roll_firsttower"
+    ],
+    "candidate_15": [
+      "diff_roll_winrate",
+      "diff_patch_winrate"
+    ],
+    "candidate_16": [
+      "diff_roll_winrate",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_17": [
+      "diff_roll_winrate",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_18": [
+      "diff_roll_winrate",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_19": [
+      "diff_roll_winrate",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_20": [
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon"
+    ],
+    "candidate_21": [
+      "diff_roll_golddiff15",
+      "diff_roll_firstherald"
+    ],
+    "candidate_22": [
+      "diff_roll_golddiff15",
+      "diff_roll_firsttower"
+    ],
+    "candidate_23": [
+      "diff_roll_golddiff15",
+      "diff_patch_winrate"
+    ],
+    "candidate_24": [
+      "diff_roll_golddiff15",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_25": [
+      "diff_roll_golddiff15",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_26": [
+      "diff_roll_golddiff15",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_27": [
+      "diff_roll_golddiff15",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_28": [
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald"
+    ],
+    "candidate_29": [
+      "diff_roll_firstdragon",
+      "diff_roll_firsttower"
+    ],
+    "candidate_30": [
+      "diff_roll_firstdragon",
+      "diff_patch_winrate"
+    ],
+    "candidate_31": [
+      "diff_roll_firstdragon",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_32": [
+      "diff_roll_firstdragon",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_33": [
+      "diff_roll_firstdragon",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_34": [
+      "diff_roll_firstdragon",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_35": [
+      "diff_roll_firstherald",
+      "diff_roll_firsttower"
+    ],
+    "candidate_36": [
+      "diff_roll_firstherald",
+      "diff_patch_winrate"
+    ],
+    "candidate_37": [
+      "diff_roll_firstherald",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_38": [
+      "diff_roll_firstherald",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_39": [
+      "diff_roll_firstherald",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_40": [
+      "diff_roll_firstherald",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_41": [
+      "diff_roll_firsttower",
+      "diff_patch_winrate"
+    ],
+    "candidate_42": [
+      "diff_roll_firsttower",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_43": [
+      "diff_roll_firsttower",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_44": [
+      "diff_roll_firsttower",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_45": [
+      "diff_roll_firsttower",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_46": [
+      "diff_patch_winrate",
+      "diff_strong_lead10_rate"
+    ],
+    "candidate_47": [
+      "diff_patch_winrate",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_48": [
+      "diff_patch_winrate",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_49": [
+      "diff_patch_winrate",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_50": [
+      "diff_strong_lead10_rate",
+      "diff_strong_lead15_rate"
+    ],
+    "candidate_51": [
+      "diff_strong_lead10_rate",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_52": [
+      "diff_strong_lead10_rate",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_53": [
+      "diff_strong_lead15_rate",
+      "diff_strong_lead20_rate"
+    ],
+    "candidate_54": [
+      "diff_strong_lead15_rate",
+      "diff_firstbaron_rate"
+    ],
+    "candidate_55": [
+      "diff_strong_lead20_rate",
+      "diff_firstbaron_rate"
+    ],
+    "base_7": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald",
+      "diff_roll_firsttower",
+      "diff_patch_winrate"
+    ],
+    "lead10_baron_9": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald",
+      "diff_roll_firsttower",
+      "diff_patch_winrate",
+      "diff_strong_lead10_rate",
+      "diff_firstbaron_rate"
+    ],
+    "lead15_baron_9": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald",
+      "diff_roll_firsttower",
+      "diff_patch_winrate",
+      "diff_strong_lead15_rate",
+      "diff_firstbaron_rate"
+    ],
+    "lead20_baron_9": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald",
+      "diff_roll_firsttower",
+      "diff_patch_winrate",
+      "diff_strong_lead20_rate",
+      "diff_firstbaron_rate"
+    ],
+    "all_11": [
+      "diff_roll_winrate",
+      "diff_roll_golddiff15",
+      "diff_roll_firstdragon",
+      "diff_roll_firstherald",
+      "diff_roll_firsttower",
+      "diff_patch_winrate",
+      "diff_strong_lead10_rate",
+      "diff_strong_lead15_rate",
+      "diff_strong_lead20_rate",
+      "diff_firstbaron_rate"
+    ]
+  },
+  "caveat": "2026 has previously been inspected; retrospective replay, not an untouched test.",
+  "best_of": "Reconstructed from completed-series win counts; assumes format known before series.",
+  "inputs": "2026 prior completed games update rolling inputs only; weights and scaler stay frozen."
+}

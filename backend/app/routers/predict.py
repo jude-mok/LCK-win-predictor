@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from app.schemas.predict import Predict_Request, Predict_Response
-from app.services.model import predict_match, get_teams, get_feature_importance
+from app.services.model import predict_match, get_teams, get_feature_importance, get_model_metadata
 
 router = APIRouter(prefix="/predict", tags=["predict"])
 
@@ -19,8 +19,12 @@ def predict(request: Predict_Request):
     if request.team1 == request.team2:
         raise HTTPException(status_code=400, detail="can't chose the same team to predict")
 
-    return predict_match(request.team1, request.team2)
+    return predict_match(request.team1, request.team2, request.best_of)
 
 @router.get("/features")
 def features():
     return get_feature_importance()
+
+@router.get("/model")
+def model_metadata():
+    return get_model_metadata()

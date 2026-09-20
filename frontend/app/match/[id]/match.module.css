@@ -1,0 +1,45 @@
+.page { min-height:100vh; background:#f4f6f8; color:#191f28; font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; letter-spacing:-.025em; }
+.page h1,.page h2,.page h3 {font-family:inherit;}
+.nav {height:76px;background:#fff;border-bottom:1px solid #eef0f3;}
+.nav>div {max-width:1080px;height:100%;padding:0 32px;margin:auto;display:flex;justify-content:space-between;align-items:center;}
+.brand {display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.7px;}
+.brandMark {display:grid;place-items:center;width:30px;height:32px;background:#3182f6;color:white;border-radius:10px;font-size:23px;font-style:italic;}
+.navLink {font-size:14px;font-weight:600;color:#6b7684;display:flex;gap:16px;align-items:center;}
+.main {max-width:1000px;margin:auto;padding:30px 32px 48px;}
+.back {display:inline-flex;align-items:center;gap:6px;color:#8b95a1;font-size:14px;font-weight:500;}
+.back:hover,.navLink:hover {color:#3182f6;}
+.intro {margin:30px 0 28px;}
+.intro>p {color:#3182f6;font-size:11px;font-weight:750;letter-spacing:1.6px;margin-bottom:10px;}
+.intro h1 {font-size:32px;font-weight:750;line-height:1.4;letter-spacing:-1.2px;}
+.intro>span {display:block;color:#8b95a1;font-size:15px;margin-top:9px;}
+.mobileBreak {display:none;}
+.prediction {background:#fff;border-radius:26px;padding:26px 36px 24px;box-shadow:0 3px 14px #191f2803;}
+.cardTop {display:flex;justify-content:space-between;align-items:center;}
+.badge {font-size:13px;font-weight:650;color:#3182f6;background:#eaf3ff;padding:7px 11px;border-radius:9px;}
+.segment {display:flex;background:#f2f4f6;padding:3px;border-radius:10px;gap:2px;}
+.segment button {padding:5px 13px;border-radius:8px;font-size:12px;font-weight:700;color:#8b95a1;cursor:pointer;}
+.segment button[aria-pressed=true] {background:#fff;color:#333d4b;box-shadow:0 1px 4px #0000000c;}
+.date {text-align:center;color:#8b95a1;font-size:12px;margin-top:14px;}.date span {padding:0 6px;color:#c5cbd2;}
+.matchup {display:grid;grid-template-columns:1fr 1fr;position:relative;margin:18px 0 22px;}
+.contender {text-align:center;}
+.logo {width:78px;height:78px;margin:0 auto 9px;display:grid;place-items:center;background:#f9fafb;border-radius:24px;}.logo img {object-fit:contain;width:56px;height:56px;}
+.contender h2 {font-size:16px;font-weight:650;margin-bottom:8px;}
+.blueOdds,.darkOdds {font-size:44px;line-height:1.2;font-weight:750;font-variant-numeric:tabular-nums;letter-spacing:-1.5px;}
+.blueOdds {color:#3182f6;}.darkOdds {color:#4e5968;}.blueOdds span,.darkOdds span {font-size:24px;margin-left:3px;font-weight:600;}
+.vs {position:absolute;top:66px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:650;color:#b0b8c1;}
+.probabilityBar {height:10px;border-radius:6px;overflow:hidden;background:#f2f4f6;display:flex;gap:4px;}
+.probabilityBar span {height:100%;border-radius:6px;}.probabilityBar span:first-child {background:#3182f6;}.probabilityBar span:last-child {background:#cbd5e3;}
+.predictionCaption {display:flex;justify-content:space-between;color:#8b95a1;font-size:12px;margin-top:11px;min-height:18px;}.predictionCaption>span {color:#b0b8c1;}
+.sectionHeading {display:flex;align-items:center;justify-content:space-between;margin:32px 0 17px;gap:12px;}.sectionHeading h2 {font-size:21px;font-weight:700;}.sectionHeading h2 span {font-size:13px;color:#8b95a1;font-weight:500;margin-left:6px;}.sectionHeading p {font-size:13px;color:#8b95a1;margin-top:6px;}.sectionHeading button {font-size:12px;color:#6b7684;background:#e9edf1;padding:9px 12px;border-radius:10px;white-space:nowrap;cursor:pointer;}.sectionHeading button:disabled {opacity:.45;cursor:default;}
+.rosters {display:grid;grid-template-columns:1fr 1fr;gap:20px;}.rosterCard {background:#fff;border-radius:24px;padding:22px 24px 14px;}
+.teamHeading {display:flex;align-items:center;gap:10px;padding-bottom:17px;border-bottom:1px solid #f2f4f6;}.teamHeading img {width:30px;height:30px;object-fit:contain;}.teamHeading h3 {font-size:16px;font-weight:700;}.teamHeading>span {margin-left:auto;font-size:11px;font-weight:650;letter-spacing:.7px;color:#b0b8c1;}
+.playerRow {display:flex;align-items:center;position:relative;padding:13px 6px;gap:12px;border-radius:12px;margin:3px -6px;cursor:pointer;min-height:66px;}.playerRow:hover {background:#f7f9fc;}.playerRow:focus-within {outline:2px solid #3182f6;outline-offset:1px;}.swapped {background:#f2f7ff;}
+.roleIcon {display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#f2f4f6;color:#8b95a1;font-size:23px;flex-shrink:0;}
+.playerIdentity {display:flex;flex-direction:column;gap:3px;min-width:0;}.playerIdentity strong {font-size:16px;font-weight:650;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.playerIdentity small {font-size:11px;color:#8b95a1;}.playerIdentity small span {font-size:10px;color:#b0b8c1;}
+.mainBadge,.subBadge {margin-left:auto;font-size:10px;font-weight:600;padding:4px 7px;border-radius:6px;}.mainBadge {color:#8b95a1;background:#f2f4f6;}.subBadge {color:#3182f6;background:#e5efff;}.chevron {color:#b0b8c1;font-size:20px;padding:0 3px 6px;}
+.playerRow select {position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;}
+.note {display:flex;gap:12px;padding:22px 24px;background:#eaf0f7;border-radius:16px;margin-top:22px;color:#6b7684;}.note>span {font-size:18px;color:#8b95a1;}.note strong {font-size:13px;font-weight:600;}.note p {font-size:12px;margin-top:4px;line-height:1.6;}
+.footer {margin:24px 0 0;text-align:center;font-size:11px;line-height:1.9;color:#9aa3af;}
+.loading {padding:60px 20px;text-align:center;color:#8b95a1;font-size:14px;}.error {background:#fff0f0;color:#c74646;padding:16px;border-radius:14px;margin-top:16px;font-size:14px;}
+.page button:focus-visible,.page a:focus-visible {outline:2px solid #3182f6;outline-offset:4px;}
+@media(max-width:640px) {.nav{height:64px}.nav>div{padding:0 22px}.brand{font-size:18px}.main{padding:24px 20px 36px}.intro{margin:25px 0 24px}.intro h1{font-size:29px}.mobileBreak{display:block}.intro>span{font-size:13px}.prediction{padding:22px;border-radius:22px}.date{margin-top:22px}.matchup{margin-top:20px}.logo{width:64px;height:64px;border-radius:20px}.logo img{width:46px;height:46px}.contender h2{font-size:14px}.blueOdds,.darkOdds{font-size:36px}.blueOdds span,.darkOdds span{font-size:20px}.vs{top:54px}.predictionCaption{font-size:10px}.predictionCaption>span{display:none}.rosters{grid-template-columns:1fr;gap:16px}.sectionHeading h2{font-size:20px}.sectionHeading p{font-size:12px;max-width:215px;line-height:1.6}.sectionHeading button{font-size:11px;padding:8px}.rosterCard{padding:22px}.note{padding:18px}.footer{text-align:left}}

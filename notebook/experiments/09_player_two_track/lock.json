@@ -1,0 +1,23 @@
+{
+  "epochs": {
+    "position_additive": {
+      "42": 8,
+      "43": 7,
+      "44": 77
+    },
+    "cross_position": {
+      "42": 56,
+      "43": 16,
+      "44": 42
+    }
+  },
+  "train_sets": 555,
+  "train_series": 209,
+  "fit_sets": 447,
+  "validation_series": 33,
+  "parameter_counts": {
+    "position_additive": 213,
+    "cross_position": 237
+  },
+  "primary_comparison": "2026 series accuracy; log loss secondary. Both tracks locked before reading 2026."
+}
